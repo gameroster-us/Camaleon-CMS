@@ -19,6 +19,6 @@ test:
 
 production:
   <<: *default
-  database: postgres
   username: postgres
-  password: tcamaleoncms_development
+  password: postgres
+  database: camaleoncms_production

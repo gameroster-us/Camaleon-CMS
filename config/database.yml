@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  password: postgres
+  username: postgres
+  database: camaleoncms_development
+
+test:
+  <<: *default
+  password: postgres
+  username: postgres
+  database: camaleoncms_test
+
+production:
+  <<: *default
+  database: postgres
+  username: postgres
+  password: tcamaleoncms_development
